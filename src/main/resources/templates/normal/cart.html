@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base1::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>About</title>
+</head>
+<body>
+
+	<section>
+		
+			<div class="container h-100 py-5">
+			  <div class="row d-flex justify-content-center align-items-center h-10">
+				<div class="col-10">
+		  
+				  <div class="d-flex justify-content-center align-items-center mb-4">
+					<h3 class="fw-normal mb-0 text-white font-weight-bold">Shopping Cart</h3><br><br>
+				  </div>
+				  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+				  <div th:each="i: ${name}">
+				  <div class="card rounded-3 mb-4">
+					<div class="card-body p-4" style="color: black;">
+					  <div class="row d-flex justify-content-between align-items-center">
+						<div class="col-md-1 col-lg-1 col-xl-1">
+						 <img alt="profile photo" src="" class="my_profile " style="height: 40px; width: 40px;"
+								th:src="@{'/img/'+${i.image}}" />
+						</div>
+						<div class="col-md-3 col-lg-3 col-xl-3">
+						  <div class="lead fw-normal mb-2" th:text="${i.itemName}"></div>
+						</div>
+						<div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+							<div class="mb-0" th:text="'Quantity: '+ ${i.quantity}"></div>
+						</div>
+						<div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+						  <div class="mb-0" th:text="'Price: '+${i.price}"></div>
+						</div>
+						<div class="col-md-1 col-lg-1 col-xl-1 text-end">
+							<form class="mt-2" th:action="@{/user/process-delete}" th:object="${cart}" method="Post">
+								<input type="hidden" name="itemName" th:value="${i.itemName}">
+								<button type="submit" class="text-danger"><i class="fa fa-trash fa-lg"></i></button>
+							</form>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="card">
+					<div class="card-body">
+					  <div class="mb-0 text-center" style="color:black">Total Price: <span th:text="${sum}"></span></div>
+					</div>
+				  </div>
+				  </div>
+				  <form class="mt-2" th:action="@{/user/buy}" method="get">
+				  <div class="card">
+					<div class="card-body">
+						<input type="hidden" name="price" th:value="${sum}">
+					  <button type="submit" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+					</div>
+				  </div>
+				</form>
+				</div>
+			  </div>
+			</div>
+	</section>
+
+</body>
+</html>

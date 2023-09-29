@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base1::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>About</title>
+</head>
+<body>
+
+	<section>
+	<h2 class="text-center">Proceed your order</h2><br><br>
+	<div class="card mr-4 ml-4" style="background-color: transparent;">
+		<div class="card-body">
+			<h5 class="ml-4">Enter card details</h5>
+
+<!-- form -->
+				<form
+				  action="#"
+				  th:action="@{/user/process-buy}"
+				  class="mt-2"
+				  method="POST"
+				>
+<!-- card no. -->
+				<div class="input-group mt-3">
+				  <div class="input-group-prepend">
+					<div class="input-group-text">
+					  <i>Card Number</i>
+					</div>
+				  </div>
+				  <input required
+					type="text"
+					id="cardNo"
+					name="cardNo"
+					placeholder="Enter Card Number"
+					class="form-control"
+				  />
+				</div>
+<!-- Name -->
+				  <div class="input-group mt-3">
+					<div class="input-group-prepend">
+					  <div class="input-group-text">
+						<i>Card Holder Name</i>
+					  </div>
+					</div>
+					<input required
+					  type="text"
+					  id="holderName"
+					  name="holderName"
+					  placeholder="Enter Name"
+					  class="form-control"
+					/>
+				  </div>
+<!-- cvv -->
+				  <div class="input-group mt-3">
+					<div class="input-group-prepend">
+					  <div class="input-group-text">
+						<i>CVV</i>
+					  </div>
+					</div>
+					<input required
+					  type="text"
+					  id="cvv"
+					  name="cvv"
+					  placeholder="Enter CVV"
+					  class="form-control"
+					/>
+				  </div>
+<!-- pin -->
+				  <div class="input-group mt-3">
+					<div class="input-group-prepend">
+					  <div class="input-group-text">
+						<i>Pin</i>
+					  </div>
+					</div>
+					<input required
+					  type="password"
+					  id="pin"
+					  name="pin"
+					  placeholder="Enter Pin"
+					  class="form-control"
+					/>
+				  </div>
+				  <input
+				  type="hidden"
+				  id="price"
+				  name="price"
+				  th:value="${price}">
+				  <div class="container text-center mt-3">
+					<a class="mr-3"  style="color: aliceblue;" th:href="@{/user/dashboard/0}">Back</a>
+					<button type="submit" class="btn btn-outline-defalt">
+					  place order 
+					</button>
+				  </div>
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</section>
+
+</body>
+</html>

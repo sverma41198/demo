@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{normal/base1::layout(~{::section})}">
+<head>
+<meta charset="ISO-8859-1">
+<title>About</title>
+</head>
+<body>
+
+	<section>
+        <div class="card mr-4 ml-4" style="background-color: transparent;">
+          <div class="card-body">
+            <h1 class="text-center">Add Your Cards</h1>
+  <!-- error success message -->
+            <div th:if="${message}" class="alert alert-success" role="alert">
+              <span th:text="${message}"></span>
+            </div>
+            <hr/>
+            <br/>
+            <div class="container-fluid mt-1">
+              <div class="row">
+                <div class="col-md-10 offset-md-1">
+  <!-- form -->
+                  <form
+                    action="#"
+                    th:action="@{/user/process-cards}"
+                    class="mt-2"
+                    th:object="${cards}"
+                    method="POST"
+                  >
+  <!-- card no. -->
+                  <div class="input-group mt-3">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i>Card Number</i>
+                      </div>
+                    </div>
+                    <input required
+                      type="text"
+                      id="cardNo"
+                      name="cardNo"
+                      placeholder="Enter Card Number"
+                      class="form-control"
+                    />
+                  </div>
+  <!-- Name -->
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i>Card Holder Name</i>
+                        </div>
+                      </div>
+                      <input required
+                        type="text"
+                        id="holderName"
+                        name="holderName"
+                        placeholder="Enter Name"
+                        class="form-control"
+                      />
+                    </div>
+<!-- amount -->
+                    <div class="input-group mt-3">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <i>amount</i>
+                          </div>
+                        </div>
+                        <input required
+                          type="number"
+                          id="amount"
+                          name="amount"
+                          placeholder="Enter amount"
+                          class="form-control"
+                        />
+                      </div>
+  <!-- cvv -->
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i>CVV</i>
+                        </div>
+                      </div>
+                      <input required
+                        type="number"
+                        id="cvv"
+                        name="cvv"
+                        placeholder="Enter CVV"
+                        class="form-control"
+                      />
+                    </div>
+  <!-- pin -->
+                    <div class="input-group mt-3">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i>Pin</i>
+                        </div>
+                      </div>
+                      <input required
+                        type="password"
+                        id="pin"
+                        name="pin"
+                        placeholder="Enter Pin"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="container text-center mt-3">
+                      <a class="mr-3"  style="color: aliceblue;" th:href="@{/user/dashboard/0}">Back</a>
+                      <button type="submit" class="btn btn-outline-defalt">
+                        Save Cards
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</body>
+</html>

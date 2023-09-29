@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+
+body{
+	background: #e2e2e2;
+}
+.bg-primary{
+	background: #000001 !important;
+}
+
+.banner{
+	width:100%;
+	min-height: 92vh;
+	background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../img/istockphoto.jpg);
+	background-size: cover;
+	color:#ffffff;
+    background-attachment: fixed;
+}
+
+.banners{
+	width:100%;
+	height:100vh;
+	background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)), url(../img/istockphoto.jpg);
+	background-size: cover;
+	color: rgb(0, 0, 0);
+}
+
+.my-card{
+	padding: 20px;
+	background: #FFFFFF;
+}
+
+
+.sidebar{
+	width: 18%;
+	background: rgb(0, 0, 0);
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 100;
+
+}
+
+.sidebar a{
+		display: block;
+		width: 100%;
+		padding: 10px 25px;
+		text-decoration: none;
+		color: white;
+}
+
+.sidebar a:hover{
+	color: #000001;
+	background: #e2e2e2;
+}
+
+.sidebar .crossBtn{
+	position: absolute;
+	top: 0;
+	color: white;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+.content{
+	margin-left: 18%;
+
+}
+.bars{
+	margin: 30px 40px;
+	cursor:pointer;
+	
+}
+
+/* search css */
+
+.search-container{
+	position: relative;
+}
+.search-result{
+	position: absolute;
+	background: white;
+	width:100%;
+	padding:10px;
+	border: 1px solid gray;
+	display: none;
+	z-index: 10;
+}
+
+/* table scroll  */
+.my-custom-scrollbar {
+	position: relative;
+	height: 70%;
+	overflow: auto;
+	}
+	.table-wrapper-scroll-y {
+	display: block;
+	}
+/* home page */
+
+#radius-shape-1 {
+	border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+	height: 220px;
+	width: 220px;
+	top: -100px;
+	left: -130px;
+	background: radial-gradient(#44006b, #095413);
+	overflow:hidden;
+  }
+
+  #radius-shape-2 {
+	border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+	bottom: -150px;
+	right: -50px;
+	width: 300px;
+	height: 300px;
+	background: radial-gradient(#44006b, #095413);
+	overflow: hidden;
+  }
+
+  .bg-glass {
+	background:#eeeeee;
+	backdrop-filter: saturate(200%) blur(25px);
+  }
+
+  .product-card{
+	background-size: cover;
+	display: flex;
+
+  }
+  .product{
+	display: flex;
+	
+	flex-wrap: wrap;
+  }
+  .card-container {
+	
+	margin: 12px;
+  }
+  #cards .product-img {
+	height: 250px;
+  }
+  .product-alignment{
+	display: flex;
+	
+  }
