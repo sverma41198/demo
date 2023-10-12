@@ -1,19 +1,19 @@
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\config\UserDetailService.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\AdminController.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\UserController.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\config\CustomUserDetails.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\config\Config.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\SearchController.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\repository\UserRepository.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\IHomeController.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\entities\Cart.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\entities\Item.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\repository\CardsRepository.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\entities\User.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\IComman.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\HomeController.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\entities\Cards.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\repository\ItemRepository.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\boot03onlineshopping.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\repository\CartRepository.java
-F:\git Kraken\shopping-application\boot03onlineshopping\src\main\java\com\manager\controller\Comman.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/AdminController.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/SearchController.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/entities/Cards.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/UserController.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/boot03onlineshopping.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/repository/CardsRepository.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/repository/UserRepository.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/entities/User.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/repository/CartRepository.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/IHomeController.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/repository/ItemRepository.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/HomeController.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/config/Config.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/config/UserDetailService.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/entities/Item.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/IComman.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/controller/Comman.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/entities/Cart.java
+/home/ubuntu/spring-boot-app/src/main/java/com/manager/config/CustomUserDetails.java

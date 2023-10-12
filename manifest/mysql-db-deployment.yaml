@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.31.1 (46dcb9181)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysql-db
+  name: mysql-db
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mysql-db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml
+        kompose.version: 1.31.1 (46dcb9181)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/spring-boot-app-default: "true"
+        io.kompose.service: mysql-db
+    spec:
+      containers:
+        - env:
+            - name: MYSQL_DATABASE
+              value: onlineshopping
+            - name: MYSQL_PASSWORD
+              value: admin
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
+            - name: MYSQL_USER
+              value: admin
+          image: mysql/mysql-server:5.7
+          name: mysql-57
+          ports:
+            - containerPort: 3306
+              hostPort: 3306
+              protocol: TCP
+            - containerPort: 33060
+              hostPort: 33060
+              protocol: TCP
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: mysql-db-claim0
+      restartPolicy: Always
+      volumes:
+        - name: mysql-db-claim0
+          persistentVolumeClaim:
+            claimName: mysql-db-claim0
+status: {}
